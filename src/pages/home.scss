@@ -5,6 +5,7 @@
   flex-direction: column;
   flex: 1;
   background:  #010310;
+  color: #fff;
   > .header  {
     height: px(99);
     background-size: cover;
@@ -20,7 +21,7 @@
     grid-column-gap: px(28);
     grid-row-gap: px(28);
   
-    > section {
+    .bordered {
       border: 1px solid #0764bc;
       border-radius: 4px;
       background: #0c1139;
@@ -40,8 +41,7 @@
         9px 0 0 -8px #0d4483,
         -9px 0 0 -8px #0d4483,
         0 9px 0 -8px #0d4483,
-        0 -9px 0 -8px #0d4483,;
-
+        0 -9px 0 -8px #0d4483;
       }
     }
 
@@ -59,6 +59,27 @@
     }
     > .section5 {
       grid-area: box5;
+    }
+
+    .jurisdiction-statistic {
+      height: px(315);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        flex-shrink: 0;
+        border: 1px solid #0a5299;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        font-size: px(22);
+        line-height: px(24);
+        padding: px(10) px(28);
+        text-shadow: 0 0 px(3) white;
+      }
+      .chart {
+        flex: 1;
+        width: 100%;
+      }
     }
   }
 }
