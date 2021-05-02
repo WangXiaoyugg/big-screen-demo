@@ -79,7 +79,7 @@
       grid-area: box5;
     }
 
-    .jurisdiction-statistic, .cracked-rank  {
+    .jurisdiction-statistic, .cracked-rank, .case-trend  {
       height: px(315);
       display: flex;
       flex-direction: column;
@@ -123,6 +123,9 @@
           background: linear-gradient(90deg, #b92ae8 0%, #6773e7 100%);
         }
       }
+    }
+    .case-trend  {
+      height: px(400);
     }
   }
 }
