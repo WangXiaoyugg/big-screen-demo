@@ -3,12 +3,11 @@ import * as echarts from 'echarts'
 import px from '../shared/px'
 import { baseEchartsOptions} from '../shared/base-echarts-options'
 import { createEchartsOptions } from '../shared/create-echarts-options'
-const chart1 = () => {
+const chart2 = () => {
   const chartRef = useRef(null);
   useEffect(() => {
     const myChart = echarts.init(chartRef.current)
     myChart.setOption(createEchartsOptions({
-      ...baseEchartsOptions,
       grid: {
         x: px(100),
         y: px(40),
@@ -18,31 +17,44 @@ const chart1 = () => {
       xAxis: {
         type: 'value',
         boundaryGap: [0, 0.01],
+        splitLine: {show: false},
+        axisLabel: { show: false },
       },
       yAxis: {
         type: 'category',
-        data: ["兰州新区",'城关区',"七里河区","西固区","安宁区","红古区",'榆中县', '永登县', '皋兰县'],
+        axisTick: { show: false },
+        data: ['城关区公安局', '七里河区公安局', '西固区公安局', '安宁区公安局', '红古区公安局',
+          '永登县公安局', '皋兰县公安局', '榆中县公安局', '新区公安局'],
+        axisLabel: {
+          formatter(val) {
+            return val.replace('公安局', '\n公安局')
+          }
+        }  
       },
       series: [
         {
           name: '2011年',
           type: 'bar',
-          data: [18203, 23489, 29034, 104970, 131744, 630230]
+          data: [1, 2, 3, 4, 5, 6, 7, 8, 9]
         },
         {
           name: '2012年',
           type: 'bar',
-          data: [19325, 23438, 31000, 121594, 134141, 681807]
+          data: [2, 3, 4, 5, 6, 7, 8, 9, 10]
         }
       ]
     }))
   }, [])
   return (
-    <div className="bordered jurisdiction-statistic">
+    <div className="bordered cracked-rank">
       <h2>案件破获排名</h2>
       <div className="chart" ref={chartRef}></div>
+      <div className="legend">
+        <span className="first" />刑事案件
+        <span className="second" />民事案件
+      </div>
     </div>
   )
 }
 
-export default chart1
+export default chart2
