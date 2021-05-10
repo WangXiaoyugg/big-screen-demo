@@ -77,6 +77,9 @@
     }
     > .section4 {
       grid-area: box4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     > .section5 {
       grid-area: box5;
@@ -84,7 +87,7 @@
 
     .jurisdiction-statistic, .cracked-rank, 
     .case-trend, .case-time, .battle-results,
-    .native-place{
+    .native-place, .age-group{
       height: px(315);
       display: flex;
       flex-direction: column;
@@ -182,6 +185,21 @@
           right: px(10);
           font-size: px(16);
         }
+      }
+    }
+    .age-group {
+      display: flex;
+      flex-direction: column;
+      height: px(363);
+      > .charts {
+        width: 100%; flex: 1; border: 1px solid red;
+        display:  flex; padding: px(30);
+      }
+      &-1, &-2, &-3 {
+        flex: 1;
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
       }
     }
   }
