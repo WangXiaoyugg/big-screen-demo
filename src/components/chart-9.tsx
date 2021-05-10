@@ -8,7 +8,7 @@ import * as echarts from 'echarts';
   }, []);
 
   return (
-    <div className="age-group-3">9
+    <div className="age-group-3">
       <div ref={divRef} className="chart">
 
       </div>
