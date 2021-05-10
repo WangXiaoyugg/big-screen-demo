@@ -222,6 +222,10 @@
           justify-content: flex-start;
         }
       }
+      &-3 {
+        border: 1px solid #08397d;
+        h3 {font-size: px(20); color: #7ab6db; margin-top: px(6); text-align: center;}
+      }
 
     }
   }
