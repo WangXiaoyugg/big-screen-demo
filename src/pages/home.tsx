@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import './home.scss';
 import HeaderBg from '../images/header.png'
 import Chart1 from '../components/chart-1'
@@ -10,6 +10,8 @@ import Chart6 from '../components/chart-6'
 import Chart7 from '../components/chart-7'
 import Chart8 from '../components/chart-8'
 import Chart9 from '../components/chart-9'
+import Chart10 from '../components/chart-10'
+
 
 
 
@@ -41,7 +43,23 @@ export const Home = () => {
             </div>
           </div>
         </section>
-        <section className="bordered section5"></section>
+        <section className="section5">
+          <div className="bordered row1 case-type">
+            <h2>案发类型统计</h2>
+            <div className="charts">
+              <Chart10 />
+            </div>
+          </div>
+          <div className="bordered row2 case-street">
+            <h2>案发街道统计</h2>
+            <div className="charts">
+
+            </div>
+          </div>
+          <div className="bordered row3 crime-methods">
+            <h2>作案手段分析</h2>
+          </div>
+        </section>
       </main>
       <div className="footer">
         兰州市公安局技术部@2020-{year}
