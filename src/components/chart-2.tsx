@@ -93,7 +93,7 @@ const chart2 = () => {
   return (
     <div className="bordered cracked-rank">
       <h2>案件破获排名</h2>
-      <div className="chart" ref={chartRef}></div>
+      <div className="chart" ref={divRef}></div>
       <div className="legend">
         <span className="first" />刑事案件
         <span className="second" />民事案件
