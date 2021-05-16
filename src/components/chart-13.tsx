@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import * as echarts from 'echarts';
 import {createEchartsOptions} from '../shared/create-echarts-options';
+import px from '../shared/px';
 
 const Chart13 = () => {
   const divRef = useRef(null);
@@ -18,6 +19,7 @@ const Chart13 = () => {
   useEffect(() => {
     var myChart = echarts.init(divRef.current);
     myChart.setOption(createEchartsOptions({
+      grid: {x: px(10), x2: px(10), y: px(30), y2: px(10)},
       xAxis: {
         data: data.map(i => i.name),
         axisTick: {show: false},
