@@ -131,6 +131,9 @@
     .cracked-rank {
       height: px(423);
       // margin-top: px(20);
+      .chart {
+        padding: 0 px(0);
+      }
       .legend {
         display: flex;
         align-items: center;
@@ -166,7 +169,9 @@
     }
     .battle-results, .crime-methods {
       padding: 0 px(24);
+      
       > table {
+        position: relative;
         width: 100%;
         table-layout: fixed;
         margin-top: px(25);
@@ -242,7 +247,14 @@
         flex-direction: column;
       }
       &-1, &-2 {
-         .legend { @extend %legend; }
+         .legend { @extend %legend; 
+          > .male {
+            background: #33a4fa;
+          }
+          > .female {
+            background: #8d70f8;
+          }
+        }
         .chart {
           position: relative;
           display: flex;
